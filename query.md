@@ -20,6 +20,10 @@ FROM `students`
 WHERE YEAR(`date_of_birth`) < 1992;
 ```
 
+```
+SELECT * FROM students WHERE TIMESTAMPDIFF(YEAR, `date_of_birth` , CURDATE()) > 30;
+```
+
 - opt-2 (più precisa) - (3400 total)
 ```
 SELECT * 
@@ -59,6 +63,10 @@ FROM `departments`;
 ```
 SELECT COUNT(`id`) 
 FROM `departments`;
+```
+
+```
+SELECT COUNT(*) AS `numero di dipartimenti` FROM `departments`;
 ```
 
 ## 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)

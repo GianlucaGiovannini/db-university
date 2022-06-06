@@ -28,5 +28,6 @@ GROUP BY `exams`.`id`
 SELECT COUNT(`degrees`.`id`) AS `n_corsi`, `departments`.`name` AS `nome_dipartimento` 
 FROM `degrees`
 JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
-GROUP BY `departments`.`name`
+GROUP BY `departments`.`id`
+ORDER BY `n_corsi` ASC
 ```
